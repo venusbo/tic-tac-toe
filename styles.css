@@ -1,0 +1,82 @@
+.gameBox {
+    border-style: solid;
+    width: 600px;
+    height: 600px;
+    border-width: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:50px;
+}
+
+.square {
+    border-style: solid;
+    width: 190px;
+    height: 190px;
+    border-width: 1px;
+    float:inline-start;
+    margin-left: 6px;
+    margin-top: 6px;
+}
+
+.scoreDisplay {
+    margin: 30px;
+}
+
+.playAgainButton {
+    
+}
+
+h1 {
+    font-size: 150px;
+    font-family: sans-serif;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 48px;
+    font-family: sans-serif;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+h3 {
+    font-size: 24px;
+    font-family: sans-serif;
+}
+
+nav {
+    height: 100px;
+    margin: 10px;
+    justify-content: center;
+}
+
+button {
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    height: 30px;
+}
+
+.navBox {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.statusBar {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    justify-content: center;
+}
+
+.turnStatus{
+    margin: 0px 0px 0px 0px;
+}
