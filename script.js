@@ -50,6 +50,7 @@ function createGame(){
             && square7.textContent && square8.textContent && square9.textContent
             && isThereAWinner == false){
                 turnStatus.textContent = "Tie!"
+                spawnPlayAgainButton()
             }
     }
 
