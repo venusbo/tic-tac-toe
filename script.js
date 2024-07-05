@@ -1,5 +1,4 @@
 
-
 function initialiseGameTurnStatus() {
     const turnStatus = document.getElementById("turnStatus")
     turnStatus.textContent = "O's Turn"
@@ -177,7 +176,10 @@ function createGame(){
 
     function removePlayAgainButton() {
         const playAgainButton = document.getElementById("playAgainButton")
-        playAgainButton.remove()
+        if (playAgainButton){
+            playAgainButton.remove()
+        }
+        
     }
 
     
@@ -204,6 +206,7 @@ function clickNewGame(){
     newGame.removePlayAgainButton()
     newGame.resetPlayerScore()
     newGame.displayPlayerScore()
+    isThereAWinner = false
 }
 
 function clickPlayAgain(){
