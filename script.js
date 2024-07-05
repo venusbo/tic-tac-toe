@@ -1,9 +1,5 @@
 
-function initialiseGameTurnStatus() {
-    const turnStatus = document.getElementById("turnStatus")
-    turnStatus.textContent = "O's Turn"
 
-}
 
 function createGame(){
 
@@ -14,6 +10,12 @@ function createGame(){
 
     isThereAWinner = false
     
+    function initialiseGameTurnStatus() {
+        const turnStatus = document.getElementById("turnStatus")
+        turnStatus.textContent = turn +"'s Turn"
+    
+    }
+
     function flip(box){
         const square = document.getElementById(box)
         const turnStatus = document.getElementById("turnStatus")
@@ -184,7 +186,7 @@ function createGame(){
     }
 
     
-    return {flip, checkForWinner, resetGameBoard, incrementPlayerScore, displayPlayerScore, resetPlayerScore,
+    return {initialiseGameTurnStatus, flip, checkForWinner, resetGameBoard, incrementPlayerScore, displayPlayerScore, resetPlayerScore,
          spawnPlayAgainButton, removePlayAgainButton, checkForTie}
     }
     
@@ -203,7 +205,7 @@ function boxClicked(box){
 
 function clickNewGame(){
     newGame.resetGameBoard()
-    initialiseGameTurnStatus()
+    newGame.initialiseGameTurnStatus()
     newGame.removePlayAgainButton()
     newGame.resetPlayerScore()
     newGame.displayPlayerScore()
@@ -213,8 +215,6 @@ function clickNewGame(){
 function clickPlayAgain(){
     isThereAWinner = false
     newGame.resetGameBoard()
-    initialiseGameTurnStatus()
+    newGame.initialiseGameTurnStatus()
     newGame.removePlayAgainButton()
-
-    
 }
