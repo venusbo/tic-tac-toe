@@ -47,12 +47,15 @@ function createGame(){
         const square9 = document.getElementById("box9Text")
         const turnStatus = document.getElementById("turnStatus")
 
-        if (square1.textContent && square2.textContent && square3.textContent 
-            && square4.textContent && square5.textContent && square6.textContent
-            && square7.textContent && square8.textContent && square9.textContent
-            && isThereAWinner == false){
-                turnStatus.textContent = "Tie!"
-                spawnPlayAgainButton()
+        if (turnStatus.textContent != "Tie!"){
+
+            if (square1.textContent && square2.textContent && square3.textContent 
+                && square4.textContent && square5.textContent && square6.textContent
+                && square7.textContent && square8.textContent && square9.textContent
+                && isThereAWinner == false){
+                    turnStatus.textContent = "Tie!"
+                    spawnPlayAgainButton()
+                }
             }
     }
 
@@ -124,6 +127,7 @@ function createGame(){
         const statusBar = document.getElementById("statusBar")
         playAgainButton.textContent = "Play Again"
         playAgainButton.id = "playAgainButton"
+        playAgainButton.class = "playAgainButton"
         playAgainButton.onclick = clickPlayAgain
         statusBar.appendChild(playAgainButton)
     }
@@ -210,7 +214,6 @@ function clickNewGame(){
     newGame.resetPlayerScore()
     newGame.displayPlayerScore()
     isThereAWinner = false
-    newGame.initialiseGameTurnStatus()
 }
 
 function clickPlayAgain(){
