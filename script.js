@@ -210,6 +210,7 @@ function clickNewGame(){
     newGame.resetPlayerScore()
     newGame.displayPlayerScore()
     isThereAWinner = false
+    newGame.initialiseGameTurnStatus()
 }
 
 function clickPlayAgain(){
